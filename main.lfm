@@ -1,0 +1,641 @@
+object cForm: TcForm
+  Left = 2261
+  Height = 651
+  Top = 131
+  Width = 914
+  Caption = 'cForm'
+  ClientHeight = 651
+  ClientWidth = 914
+  OnCreate = FormCreate
+  SessionProperties = 'cAddLines.Value;cAnimationOnlyOne.Checked;cBackColor.Selected;cFontTextSize.Value;cFontText.Text;cFontTitleSize.Value;cFontTitle.Text;cInterval.Value;cMargDown.Value;cMargLeft.Value;cMargOr.Value;cMargRight.Value;cMargUp.Value;cPauseStart.Value;cShowText.Checked;cText.Lines;cTitle.Text;Height;Left;Top;Width;cPauseEnd.Value'
+  LCLVersion = '2.0.12.0'
+  object uETilePanel1: TuETilePanel
+    Left = 0
+    Height = 300
+    Top = 0
+    Width = 914
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 300
+    ClientWidth = 914
+    TabOrder = 0
+    object Label1: TLabel
+      AnchorSideLeft.Control = uETilePanel1
+      AnchorSideTop.Control = uETilePanel1
+      Left = 8
+      Height = 19
+      Top = 2
+      Width = 37
+      BorderSpacing.Left = 8
+      BorderSpacing.Top = 2
+      Caption = 'Tytuł:'
+      ParentColor = False
+    end
+    object cText: TMemo
+      AnchorSideLeft.Control = Label6
+      AnchorSideTop.Control = Label6
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = cTitle
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = uETilePanel1
+      AnchorSideBottom.Side = asrBottom
+      Left = 8
+      Height = 217
+      Top = 75
+      Width = 898
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      BorderSpacing.Bottom = 8
+      ScrollBars = ssAutoVertical
+      TabOrder = 1
+    end
+    object Label6: TLabel
+      AnchorSideLeft.Control = cTitle
+      AnchorSideTop.Control = cTitle
+      AnchorSideTop.Side = asrBottom
+      Left = 8
+      Height = 19
+      Top = 56
+      Width = 39
+      BorderSpacing.Top = 4
+      Caption = 'Tekst:'
+      ParentColor = False
+    end
+    object cTitle: TEdit
+      AnchorSideLeft.Control = Label1
+      AnchorSideTop.Control = Label1
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = uETilePanel1
+      AnchorSideRight.Side = asrBottom
+      Left = 8
+      Height = 31
+      Top = 21
+      Width = 898
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Right = 8
+      TabOrder = 0
+    end
+  end
+  object Splitter1: TSplitter
+    Cursor = crVSplit
+    Left = 0
+    Height = 4
+    Top = 300
+    Width = 914
+    Align = alTop
+    ResizeAnchor = akTop
+  end
+  object uETilePanel2: TuETilePanel
+    Left = 0
+    Height = 347
+    Top = 304
+    Width = 914
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 347
+    ClientWidth = 914
+    TabOrder = 2
+    object Label2: TLabel
+      AnchorSideLeft.Control = uETilePanel2
+      AnchorSideTop.Control = uETilePanel2
+      Left = 8
+      Height = 19
+      Top = 2
+      Width = 75
+      BorderSpacing.Left = 8
+      BorderSpacing.Top = 2
+      Caption = 'Marginesy:'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label3: TLabel
+      AnchorSideLeft.Control = Label2
+      AnchorSideTop.Control = Label2
+      AnchorSideTop.Side = asrBottom
+      Left = 8
+      Height = 19
+      Top = 29
+      Width = 60
+      Alignment = taRightJustify
+      BorderSpacing.Top = 8
+      Caption = 'lewy ='
+      Constraints.MinWidth = 60
+      ParentColor = False
+    end
+    object Label4: TLabel
+      AnchorSideLeft.Control = Label2
+      AnchorSideTop.Control = Label3
+      AnchorSideTop.Side = asrBottom
+      Left = 8
+      Height = 19
+      Top = 64
+      Width = 60
+      Alignment = taRightJustify
+      BorderSpacing.Top = 16
+      Caption = 'prawy ='
+      Constraints.MinWidth = 60
+      ParentColor = False
+    end
+    object cMargLeft: TSpinEdit
+      AnchorSideLeft.Control = Label3
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label3
+      AnchorSideTop.Side = asrCenter
+      Left = 76
+      Height = 31
+      Top = 23
+      Width = 158
+      BorderSpacing.Left = 8
+      MaxValue = 1000
+      TabOrder = 0
+    end
+    object cMargRight: TSpinEdit
+      AnchorSideLeft.Control = Label4
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label4
+      AnchorSideTop.Side = asrCenter
+      Left = 76
+      Height = 31
+      Top = 58
+      Width = 158
+      BorderSpacing.Left = 8
+      MaxValue = 1000
+      TabOrder = 1
+    end
+    object Label5: TLabel
+      AnchorSideLeft.Control = Label2
+      AnchorSideTop.Control = Label17
+      AnchorSideTop.Side = asrBottom
+      Left = 8
+      Height = 19
+      Top = 196
+      Width = 61
+      BorderSpacing.Top = 8
+      Caption = 'Czcionki:'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object cFontTitle: TComboBox
+      AnchorSideLeft.Control = Label7
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label7
+      AnchorSideTop.Side = asrCenter
+      Left = 76
+      Height = 33
+      Top = 216
+      Width = 268
+      BorderSpacing.Left = 8
+      ItemHeight = 0
+      Style = csDropDownList
+      TabOrder = 2
+    end
+    object Label7: TLabel
+      AnchorSideLeft.Control = Label5
+      AnchorSideTop.Control = Label5
+      AnchorSideTop.Side = asrBottom
+      Left = 8
+      Height = 19
+      Top = 223
+      Width = 60
+      Alignment = taRightJustify
+      BorderSpacing.Top = 8
+      Caption = 'tytuł ='
+      Constraints.MinWidth = 60
+      ParentColor = False
+    end
+    object Label8: TLabel
+      AnchorSideLeft.Control = Label7
+      AnchorSideTop.Control = Label7
+      AnchorSideTop.Side = asrBottom
+      Left = 8
+      Height = 19
+      Top = 258
+      Width = 60
+      Alignment = taRightJustify
+      BorderSpacing.Top = 16
+      Caption = 'tekst ='
+      Constraints.MinWidth = 60
+      ParentColor = False
+    end
+    object cFontText: TComboBox
+      AnchorSideLeft.Control = Label8
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label8
+      AnchorSideTop.Side = asrCenter
+      Left = 76
+      Height = 33
+      Top = 251
+      Width = 268
+      BorderSpacing.Left = 8
+      ItemHeight = 0
+      Style = csDropDownList
+      TabOrder = 4
+    end
+    object Label9: TLabel
+      AnchorSideLeft.Control = cFontTitle
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label5
+      Left = 346
+      Height = 19
+      Top = 196
+      Width = 63
+      BorderSpacing.Left = 2
+      Caption = 'Wielkość:'
+      ParentColor = False
+    end
+    object cFontTitleSize: TSpinEdit
+      AnchorSideLeft.Control = Label9
+      AnchorSideTop.Control = cFontTitle
+      AnchorSideTop.Side = asrCenter
+      Left = 346
+      Height = 31
+      Top = 217
+      Width = 86
+      MinValue = 1
+      TabOrder = 3
+      Value = 10
+    end
+    object cFontTextSize: TSpinEdit
+      AnchorSideLeft.Control = Label9
+      AnchorSideTop.Control = cFontText
+      AnchorSideTop.Side = asrCenter
+      Left = 346
+      Height = 31
+      Top = 252
+      Width = 86
+      MinValue = 1
+      TabOrder = 5
+      Value = 10
+    end
+    object BitBtn1: TBitBtn
+      AnchorSideRight.Control = BitBtn2
+      AnchorSideBottom.Control = uETilePanel2
+      AnchorSideBottom.Side = asrBottom
+      Left = 754
+      Height = 30
+      Top = 309
+      Width = 75
+      Anchors = [akRight, akBottom]
+      BorderSpacing.Right = 2
+      BorderSpacing.Bottom = 8
+      Caption = 'Start'
+      OnClick = BitBtn1Click
+      TabOrder = 6
+    end
+    object BitBtn2: TBitBtn
+      AnchorSideRight.Control = uETilePanel2
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = uETilePanel2
+      AnchorSideBottom.Side = asrBottom
+      Left = 831
+      Height = 30
+      Top = 309
+      Width = 75
+      Anchors = [akRight, akBottom]
+      BorderSpacing.Right = 8
+      BorderSpacing.Bottom = 8
+      Caption = 'Stop'
+      Enabled = False
+      OnClick = BitBtn2Click
+      TabOrder = 7
+    end
+    object Label10: TLabel
+      AnchorSideLeft.Control = cAddLines
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label2
+      Left = 630
+      Height = 19
+      Top = 2
+      Width = 60
+      BorderSpacing.Left = 12
+      Caption = 'Kolor tła:'
+      ParentColor = False
+    end
+    object cBackColor: TColorBox
+      AnchorSideLeft.Control = Label10
+      AnchorSideTop.Control = Label10
+      AnchorSideTop.Side = asrBottom
+      Left = 630
+      Height = 33
+      Top = 21
+      Width = 150
+      Selected = clWhite
+      AutoComplete = True
+      AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+      ItemHeight = 0
+      TabOrder = 8
+    end
+    object Label11: TLabel
+      AnchorSideLeft.Control = Label2
+      AnchorSideTop.Control = Label4
+      AnchorSideTop.Side = asrBottom
+      Left = 8
+      Height = 19
+      Top = 99
+      Width = 60
+      Alignment = taRightJustify
+      BorderSpacing.Top = 16
+      Caption = 'górny ='
+      Constraints.MinWidth = 60
+      ParentColor = False
+    end
+    object cMargUp: TSpinEdit
+      AnchorSideLeft.Control = Label11
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label11
+      AnchorSideTop.Side = asrCenter
+      Left = 76
+      Height = 31
+      Top = 93
+      Width = 158
+      BorderSpacing.Left = 8
+      MaxValue = 1000
+      TabOrder = 9
+    end
+    object Label12: TLabel
+      AnchorSideLeft.Control = Label2
+      AnchorSideTop.Control = Label11
+      AnchorSideTop.Side = asrBottom
+      Left = 8
+      Height = 19
+      Top = 134
+      Width = 60
+      Alignment = taRightJustify
+      BorderSpacing.Top = 16
+      Caption = 'między ='
+      Constraints.MinWidth = 60
+      ParentColor = False
+    end
+    object cMargOr: TSpinEdit
+      AnchorSideLeft.Control = Label12
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label12
+      AnchorSideTop.Side = asrCenter
+      Left = 76
+      Height = 31
+      Top = 128
+      Width = 158
+      BorderSpacing.Left = 8
+      MaxValue = 1000
+      TabOrder = 10
+    end
+    object Label13: TLabel
+      AnchorSideLeft.Control = Label2
+      AnchorSideTop.Control = Label12
+      AnchorSideTop.Side = asrBottom
+      Left = 8
+      Height = 19
+      Top = 169
+      Width = 60
+      Alignment = taRightJustify
+      BorderSpacing.Top = 16
+      Caption = 'dolny ='
+      Constraints.MinWidth = 60
+      ParentColor = False
+    end
+    object cMargDown: TSpinEdit
+      AnchorSideLeft.Control = Label13
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label13
+      AnchorSideTop.Side = asrCenter
+      Left = 76
+      Height = 31
+      Top = 163
+      Width = 158
+      BorderSpacing.Left = 8
+      MaxValue = 1000
+      TabOrder = 11
+    end
+    object Label14: TLabel
+      AnchorSideLeft.Control = cMargLeft
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label2
+      AnchorSideTop.Side = asrBottom
+      Left = 242
+      Height = 19
+      Top = 29
+      Width = 210
+      Alignment = taRightJustify
+      BorderSpacing.Left = 8
+      BorderSpacing.Top = 8
+      Caption = 'Poprawka na dodatkowe linie ='
+      Constraints.MinWidth = 210
+      ParentColor = False
+    end
+    object cAddLines: TSpinEdit
+      AnchorSideLeft.Control = Label14
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label14
+      AnchorSideTop.Side = asrCenter
+      Left = 460
+      Height = 31
+      Top = 23
+      Width = 158
+      BorderSpacing.Left = 8
+      MaxValue = 1000
+      TabOrder = 12
+    end
+    object Label15: TLabel
+      AnchorSideLeft.Control = cMargLeft
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = cAddLines
+      AnchorSideTop.Side = asrBottom
+      Left = 242
+      Height = 19
+      Top = 64
+      Width = 210
+      Alignment = taRightJustify
+      BorderSpacing.Left = 8
+      BorderSpacing.Top = 10
+      Caption = 'Interval (prędkość) ='
+      Constraints.MinWidth = 210
+      ParentColor = False
+    end
+    object cInterval: TSpinEdit
+      AnchorSideLeft.Control = Label15
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label15
+      AnchorSideTop.Side = asrCenter
+      Left = 460
+      Height = 31
+      Top = 58
+      Width = 158
+      BorderSpacing.Left = 8
+      MaxValue = 500
+      TabOrder = 13
+      Value = 30
+    end
+    object Label16: TLabel
+      AnchorSideLeft.Control = cMargLeft
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = cInterval
+      AnchorSideTop.Side = asrBottom
+      Left = 242
+      Height = 19
+      Top = 99
+      Width = 210
+      Alignment = taRightJustify
+      BorderSpacing.Left = 8
+      BorderSpacing.Top = 10
+      Caption = 'Długość pauzy na starcie (ms.) ='
+      Constraints.MinWidth = 210
+      ParentColor = False
+    end
+    object cPauseStart: TSpinEdit
+      AnchorSideLeft.Control = Label16
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label16
+      AnchorSideTop.Side = asrCenter
+      Left = 460
+      Height = 31
+      Top = 93
+      Width = 158
+      BorderSpacing.Left = 8
+      MaxValue = 100000
+      TabOrder = 14
+    end
+    object Label17: TLabel
+      AnchorSideLeft.Control = cMargLeft
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = cPauseEnd
+      AnchorSideTop.Side = asrBottom
+      Left = 242
+      Height = 19
+      Top = 169
+      Width = 210
+      Alignment = taRightJustify
+      BorderSpacing.Left = 8
+      BorderSpacing.Top = 10
+      Caption = 'Pokaż tekst na starcie ='
+      Constraints.MinWidth = 210
+      ParentColor = False
+    end
+    object cShowText: TCheckBox
+      AnchorSideLeft.Control = Label17
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label17
+      AnchorSideTop.Side = asrCenter
+      Left = 456
+      Height = 23
+      Top = 167
+      Width = 23
+      BorderSpacing.Left = 4
+      TabOrder = 15
+    end
+    object Label18: TLabel
+      AnchorSideLeft.Control = cShowText
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label17
+      Left = 483
+      Height = 19
+      Top = 169
+      Width = 190
+      Alignment = taRightJustify
+      BorderSpacing.Left = 4
+      Caption = 'Przebieg animicji tylko raz ='
+      Constraints.MinWidth = 190
+      ParentColor = False
+    end
+    object cAnimationOnlyOne: TCheckBox
+      AnchorSideLeft.Control = Label18
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label18
+      AnchorSideTop.Side = asrCenter
+      Left = 677
+      Height = 23
+      Top = 167
+      Width = 23
+      BorderSpacing.Left = 4
+      TabOrder = 16
+    end
+    object CheckBox1: TCheckBox
+      AnchorSideLeft.Control = cBackColor
+      AnchorSideTop.Control = cInterval
+      AnchorSideTop.Side = asrCenter
+      Left = 630
+      Height = 23
+      Top = 62
+      Width = 116
+      Caption = 'Wysteruj OBS'
+      TabOrder = 17
+    end
+    object Label19: TLabel
+      AnchorSideLeft.Control = cMargLeft
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = cPauseStart
+      AnchorSideTop.Side = asrBottom
+      Left = 242
+      Height = 19
+      Top = 134
+      Width = 210
+      Alignment = taRightJustify
+      BorderSpacing.Left = 8
+      BorderSpacing.Top = 10
+      Caption = 'Długość pauzy na końcu (ms.) ='
+      Constraints.MinWidth = 210
+      ParentColor = False
+    end
+    object cPauseEnd: TSpinEdit
+      AnchorSideLeft.Control = Label19
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label19
+      AnchorSideTop.Side = asrCenter
+      Left = 460
+      Height = 31
+      Top = 128
+      Width = 158
+      BorderSpacing.Left = 8
+      MaxValue = 100000
+      TabOrder = 18
+    end
+    object uELED1: TuELED
+      AnchorSideLeft.Control = CheckBox1
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = CheckBox1
+      AnchorSideTop.Side = asrCenter
+      Left = 750
+      Height = 24
+      Top = 61
+      Width = 24
+      Debug = False
+      Active = False
+      LedType = ledRound
+      Bright = True
+      Reflection = True
+      BorderSpacing.Left = 4
+      Color = clRed
+      ParentColor = False
+    end
+  end
+  object mess: TExtMessage
+    Caption = '<Auto>'
+    HelpContext = 0
+    PosTop = 0
+    PosLeft = 0
+    StringToCR = '^'
+    Left = 247
+    Top = 101
+  end
+  object propstorage: TXMLPropStorage
+    StoredValues = <>
+    RootNodePath = 'AnimatorNapisow'
+    Active = False
+    Left = 430
+    Top = 80
+  end
+  object autorun: TTimer
+    Enabled = False
+    Interval = 1
+    OnTimer = autorunTimer
+    Left = 546
+    Top = 96
+  end
+  object timer_ending: TTimer
+    Enabled = False
+    Interval = 500
+    OnTimer = timer_endingTimer
+    Left = 768
+    Top = 120
+  end
+end
